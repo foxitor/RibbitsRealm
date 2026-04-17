@@ -266,6 +266,7 @@ public class FirstPersonController : MonoBehaviour {
         // Adds force to the player rigidbody to jump
         rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
         jumpOneShot = false;
+        isGrounded = false;
         // When crouched and using toggle system, will uncrouch for a jump
         if (isCrouched && !holdToCrouch) {
             Crouch();
